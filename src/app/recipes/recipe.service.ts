@@ -21,4 +21,13 @@ export class RecipeService {
       return this.recipes;
   }
 
+  getRecipe(id: number) {
+      return this.recipes[id];
+  }
+
+  deleteRecipe(recipe: Recipe) {
+      this.recipes.splice(this.recipes.indexOf(recipe), 1);
+      //this will find the passed in recipe index, and remove start from the index, and remove 1 item. alter the original array
+  }
+
 }
